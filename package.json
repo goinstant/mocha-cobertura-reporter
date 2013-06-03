@@ -1,0 +1,18 @@
+{
+	"name": "mocha-cobertura-reporter", 
+	"version": "1.0.3", 
+	"description": "simple, flexible, fun test framework", 
+	"keywords": ["cobertura", "mocha", "test", "bdd", "tdd", "tap"], 
+	"author": "Shawn Jonnet <sjonnet19@gmail.com>", 
+	"repository": { "type": "git", "url": "git://github.com/sjonnet19/mocha-cobertura-reporter.git" }, 
+	"main": "./index", 
+	"dependencies": {
+	  "jade": "0.x.x",
+	  "mocha": "1.x.x"
+	},
+	"main": "./index",
+	"bin": {
+		"cobertura": "./bin/cobertura"
+	},
+	"engines": { "node": ">= 0.4.x" }
+}

@@ -1,0 +1,18 @@
+#!/usr/bin/env node
+
+/**
+ * Cobertura
+ */
+
+var jade = require('jade'),
+fs = require('fs')
+
+jade.doctypes.cobertura = '<!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-03.dtd">'
+var file = __dirname + '/../lib/reporters/templates/cobertura.jade', 
+str = fs.readFileSync(file, 'utf8'), 
+fn = jade.compile(str, { filename: file }),
+cov = JSON.parse(fs.readFileSync('/dev/stdin').toString())
+
+process.stdout.write(fn({
+	cov: cov
+}))

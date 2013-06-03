@@ -1,0 +1,18 @@
+!!! xml
+!!! cobertura
+coverage(branch-rate='0', line-rate='#{(cov.coverage / 100) || 0}', timestamp='#{+new Date()}', version='3.5.1')
+	sources
+		- var src = "<source>" + cov.src + "</source>"
+		| !{src}
+	packages
+		package(branch-rate='0', complexity='0.0', line-rate='#{(cov.coverage / 100) || 0}', name='.')
+			classes
+				for file in cov.files
+					class(branch-rate='0', complexity='0.0', filename='#{file.filename}', line-rate='#{(file.coverage / 100) || 0}', name='#{file.filename.split('.')[0]}')
+						methods
+						lines
+							for line, number in file.source
+								if line.coverage >= 0 
+									line(hits='#{line.coverage}', number='#{number}')
+								else
+									line(hits='', number='#{number}')
