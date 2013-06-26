@@ -8,7 +8,7 @@
 	"main": "./index", 
 	"dependencies": {
 	  "jade": "0.x.x",
-	  "mocha": "1.x.x"
+    "mocha": "1.x.x"
 	},
 	"main": "./index",
 	"bin": {
