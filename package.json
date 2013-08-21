@@ -1,6 +1,6 @@
 {
 	"name": "mocha-cobertura-reporter",
-	"version": "1.0.3-goinstant.1",
+	"version": "1.0.3-goinstant.2",
 	"description": "simple, flexible, fun test framework",
 	"keywords": ["cobertura", "mocha", "test", "bdd", "tdd", "tap"],
 	"author": "Shawn Jonnet <sjonnet19@gmail.com>",
