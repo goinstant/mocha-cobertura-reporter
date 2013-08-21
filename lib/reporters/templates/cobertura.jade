@@ -8,7 +8,7 @@ coverage(branch-rate='0', line-rate='#{(cov.coverage / 100) || 0}', timestamp='#
 		package(branch-rate='0', complexity='0.0', line-rate='#{(cov.coverage / 100) || 0}', name='.')
 			classes
 				for file in cov.files
-					class(branch-rate='0', complexity='0.0', filename='#{file.filename}', line-rate='#{(file.coverage / 100) || 0}', name='#{file.filename.split('.')[0]}')
+					class(branch-rate='0', complexity='0.0', filename='#{file.filename}', line-rate='#{(file.coverage / 100) || 0}', name='#{file.filename.split(".")[0]}')
 						methods
 						lines
 							for line, number in file.source
